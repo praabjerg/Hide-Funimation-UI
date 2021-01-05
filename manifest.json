@@ -1,7 +1,7 @@
 {
   "name": "Hide Funimation UI",
   "version": "1.0",
-  "description": "Hide/show Funimation video UI with 'z' and add 1 second left/right arrow key seek",
+  "description": "Hide/show Funimation video UI with 'z' and use left/right arrow key to seek 1 second back/forward",
   "content_scripts": [
     {
       "all_frames": true,
