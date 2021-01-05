@@ -1,7 +1,7 @@
 # Hide Funimation UI
 The Funimation video UI does not hide itself when paused, unless you can move the mouse away from the video. In fullscreen mode, that only works if you have a second screen. This can be very inconvenient when you want to take screenshots of videos.
 
-With this extension active, when watching a Funimation video, you can:
+With this browser extension active, when watching a Funimation video, you can:
  * Press 'z' to hide the video UI
  * Use the left and right arrow keys to seek back and forward in 1 second increments.
 
