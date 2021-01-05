@@ -1,0 +1,35 @@
+{
+  "name": "Hide Funimation UI",
+  "version": "1.0",
+  "description": "Hide/show Funimation video UI with 'z' and add 1 second left/right arrow key seek",
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+        "*://www.funimation.com/player/*"
+      ],
+      "js": [
+        "content_script.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/no_funi_ui16.png",
+      "32": "images/no_funi_ui32.png",
+      "48": "images/no_funi_ui48.png",
+      "128": "images/no_funi_ui128.png"
+    }
+  },
+  "icons": {
+    "16": "images/no_funi_ui16.png",
+    "32": "images/no_funi_ui32.png",
+    "48": "images/no_funi_ui48.png",
+    "128": "images/no_funi_ui128.png"
+  },
+  "manifest_version": 2
+}
