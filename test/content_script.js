@@ -2,16 +2,13 @@
 const videotags = document.getElementsByTagName('video');
 const player = videotags[0]
 
+// Find info text element (upper part of UI)
+const vjsdocktext = document.querySelector('#brightcove-player > .vjs-dock-text');
 // Find control bar element (lower part of UI)
-const jwcontrolbar = document.querySelector('.jw-wrapper > .jw-controls');
-const jwbackdrop = document.querySelector('.jw-wrapper > .jw-controls-backdrop');
-// Find captions element
-const jwcaptions = document.querySelector('.jw-wrapper > .jw-captions');
+const vjscontrolbar = document.querySelector('#brightcove-player > .vjs-control-bar');
+// Keep track of UI hidden state
+let hidden = false;
 
-// Keep track of control bar hidden state
-let barhidden = false;
-// Keep track of captions hidden state
-let captionshidden = false;
 
 // Wind back 1 second if not at beginning
 function windBack() {
@@ -41,26 +38,17 @@ function runContentScript() {
     }
     // On z, hide or show the UI
     else if (keyName === 'z') {
-      if (barhidden) {
-        jwcontrolbar.classList.remove('disappeared');
-        jwbackdrop.classList.remove('disappeared');
-        barhidden = false;
+      if (hidden) {
+        document.querySelector('#funimation-gradient').classList.remove('disappeared');
+        vjsdocktext.classList.remove('disappeared');
+        vjscontrolbar.classList.remove('disappeared');
+        hidden = false;
       }
       else {
-        jwcontrolbar.classList.add('disappeared');
-        jwbackdrop.classList.add('disappeared');
-        barhidden = true;
-      }
-    }
-    // On s, hide or show captions
-    else if (keyName === 's') {
-      if (captionshidden) {
-        jwcontrolbar.classList.remove('disappeared');
-        captionshidden = false;
-      }
-      else {
-        jwcontrolbar.classList.add('disappeared');
-        captionshidden = true;
+        document.querySelector('#funimation-gradient').classList.add('disappeared');
+        vjsdocktext.classList.add('disappeared');
+        vjscontrolbar.classList.add('disappeared');
+        hidden = true;
       }
     }
   });
