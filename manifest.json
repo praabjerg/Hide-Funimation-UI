@@ -1,6 +1,6 @@
 {
   "name": "Hide Funimation UI",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Hide/show Funimation video UI with 'z' and use PageUp/PageDown or ArrowUp/ArrowDown keys to seek 1 second back/forward",
   "content_scripts": [
     {
@@ -16,8 +16,7 @@
       ]
     }
   ],
-  "page_action": {
-    "default_popup": "popup.html",
+  "action": {
     "default_icon": {
       "16": "images/no_funi_ui16.png",
       "32": "images/no_funi_ui32.png",
@@ -31,5 +30,5 @@
     "48": "images/no_funi_ui48.png",
     "128": "images/no_funi_ui128.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
